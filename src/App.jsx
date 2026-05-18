@@ -13,7 +13,7 @@ export default function App() {
       setLoading(true);
       setError("");
 
-      const apiKey = "977fd5ed2bf27fdc63e5022401e27efe";
+      const apiKey =  import.meta.env.VITE_API_KEY;
 
       const response = await fetch(
         `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
